@@ -35,7 +35,7 @@
 - Linux: python3 -m venv env
 - Windows python -m venv env
 
-### Step-2: Activate the venv 
+### Step-2: Activate the venv
 
 - Linux: source env\bin\activate
 - Windows: env\Scripts\activate
@@ -48,23 +48,48 @@
 
 - jupyter notebook
 
-### Debug 
+### Debug
 
 #### Upgrade pip if necessary
- - Linux: python3 -m pip install --upgrade pip
- - Windows: python -m pip install --upgrade pip 
+
+- Linux: python3 -m pip install --upgrade pip
+- Windows: python -m pip install --upgrade pip
 
 #### Install wheel
+
 - Linux: pip3 install wheel
 - Windows: pip install wheel
 
 #### Install Build tools (Windows)
 
-
 # Code Description
 
-### Import necessary packages
+- Step - 1: Import necessary packages
 
+- Step - 2: Download the dataset
 
+- Step - 3: Load the dataset & Visualise the number of positive and negative reviews
+
+- Step - 4: Basic Text cleanup using beautifulsoup package and regular expressions
+
+- Step - 5: Apply bert tokenizer which handles
+  - CLS token, which is used to represent that the entire sequence is for classification
+  - SEP token to indicate boundaries of different sentence
+  - MASK to hide some tokens
+- BERT tokenizer gives their components as outputs:
+
+  - input_ids: The numerical identifiers of the vocabulary tokens
+  - token_type_ids: It identifies which segment or sentence each token belongs to.
+  - attention_mask: It flags that inform the model which tokens to pay attention to and which to disregard.
+
+- Step - 6: Load the bert base case model
+
+- Step - 7: Add, adam optimizer, loss metric and compile the model
+
+- Step - 8: Fit the model
+
+- Step - 9: Evaluate the model and plot the classifcation error
+
+- Step - 10: Apply the prediction model and save the model
 
 Ref: https://www.geeksforgeeks.org/explanation-of-bert-model-nlp/
